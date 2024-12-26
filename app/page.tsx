@@ -24,12 +24,17 @@ const PermanentMarkerFont = Permanent_Marker({
 export default function Home() {
   return (
     <>
-    <main className="shadow">
+    <main className="shadow relative overflow-hidden w-screen">
     <div className="relative h-screen mb-64 bg-cover text-center flex flex-col" style={{ background: "linear-gradient(to bottom, var(--color-background), rgba(0,0,0,0.4), var(--color-background)), url(/img/dino-bg.jpg) no-repeat 50% -10%" }}> 
       <div className="flex-1 grid place-items-center">
-        <h1 className={cx("mt-40 text-[2rem] md:text-[4rem] leading-tight uppercase", RubikDoodleShadowFont.className)}>
-          Welcome Baby Rex
-        </h1> 
+        <div className="mt-64">
+          <h1 className={cx("text-[2rem] md:text-[4rem] leading-tight uppercase", RubikDoodleShadowFont.className)}>
+            Welcome Baby Rex
+          </h1> 
+          <p className={cx("mt-4 text-2xl md:text-4xl", AmaticSCFont.className)}>
+            It&rsquo;s a boy!
+          </p>
+        </div>
       </div>
       <div className="flex justify-center items-center">
         <div className="scroll relative max-w-[12ch] uppercase leading-snug mb-16 after:h-16 after:absolute after:w-[1px] after:top-full after:left-1/2">Scroll slowly</div> 
@@ -73,75 +78,56 @@ export default function Home() {
     </div>
     <section className="text-center">
       <div className={cx("text-4xl lg:text-[4rem]", RubikDoodleShadowFont.className)}>Baby Bump</div>
+      <div className={cx("text-2xl lg:text-4xl mt-8", AmaticSCFont.className)}>images are coming soon</div>
     </section>
     <section>
-      <div className="grid gap-8 w-full h-auto p-8 grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7" id="js-grid">
-        <figure className="grid__item">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/1.jpg)" }}></div>
+      <div className="grid mt-12 mb-16 gap-8 w-full h-auto p-8 grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6" id="js-grid">
+        <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
+          <div className="grid__item-img" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
         </figure>
-        <figure className="grid__item">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/2.jpg)" }}></div>
+        <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
+          <div className="grid__item-img" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
         </figure>
-        <figure className="grid__item">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/3.jpg)" }}></div>
+        <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
+          <div className="grid__item-img" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
         </figure>
-        <figure className="grid__item">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/4.jpg)" }}></div>
+        <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
+          <div className="grid__item-img" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
         </figure>
-        <figure className="grid__item">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/5.jpg)" }}></div>
+        <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
+          <div className="grid__item-img" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
         </figure>
-        <figure className="grid__item">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/6.jpg)" }}></div>
+        <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
+          <div className="grid__item-img" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
         </figure>
-        <figure className="grid__item">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/7.jpg)" }}></div>
+        <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
+          <div className="grid__item-img" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
         </figure>
-        <figure className="grid__item">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/8.jpg)" }}></div>
+        <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
+          <div className="grid__item-img" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
         </figure>
-        <figure className="grid__item">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/9.jpg)" }}></div>
+        <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
+          <div className="grid__item-img" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
         </figure>
-        <figure className="grid__item">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/10.jpg)" }}></div>
+        <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
+          <div className="grid__item-img" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
         </figure>
-        <figure className="grid__item">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/11.jpg)" }}></div>
+        <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
+          <div className="grid__item-img" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
         </figure>
-        <figure className="grid__item">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/12.jpg)" }}></div>
-        </figure>
-        <figure className="grid__item">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/13.jpg)" }}></div>
-        </figure>
-        <figure className="grid__item">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/14.jpg)" }}></div>
-        </figure>
-        <figure className="grid__item">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/15.jpg)" }}></div>
-        </figure>
-        <figure className="grid__item">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/16.jpg)" }}></div>
-        </figure>
-        <figure className="grid__item">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/17.jpg)" }}></div>
-        </figure>
-        <figure className="grid__item">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/18.jpg)" }}></div>
-        </figure>
-        <figure className="grid__item">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/19.jpg)" }}></div>
-        </figure>
-        <figure className="grid__item">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/20.jpg)" }}></div>
-        </figure>
-        <figure className="grid__item">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/15.jpg)" }}></div>
+        <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
+          <div className="grid__item-img" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
         </figure>
       </div>
     </section>
-    <p className={cx("text-center text-2xl pb-16", AmaticSCFont.className)}>Made with ❤ by Dad</p>
+    <footer className="mx-auto w-full md:w-3/4">
+      <p className={cx("mb-8 text-center text-4xl pb-16", AmaticSCFont.className)}>Baby Rex Due Date: March 2015!</p>
+      <p className={cx("mb-8 text-center text-4xl pb-16", AmaticSCFont.className)}>
+      We&rsquo;ve got a little secret, indeed it&rsquo;s true,<br /> A name for our baby, we&rsquo;ll share with you<br /> But until he arrives,
+      we&rsquo;ll keep it tight, a special surprise, a pure delight.<br /> When he&rsquo;s here, we&rsquo;ll share with cheer, the name of our son, whom we love so dear.
+      </p>
+      <p className={cx("text-center text-2xl pb-16", AmaticSCFont.className)}>Made with ❤ by Dad</p>
+    </footer>
   </main>
   {/* <!-- GSAP library --> */}
   <Script src="js/gsap.min.js"></Script>

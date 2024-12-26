@@ -98,46 +98,6 @@ body {
   }
 }
 
-/* Better focus styles from https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible */
-a:not(.card__image):focus {
-  /* Provide a fallback style for browsers
-   that don't support :focus-visible */
-  outline: none;
-  background: lightgrey;
-}
-
-a:not(.card__image):focus:not(:focus-visible) {
-  /* Remove the focus indicator on mouse-focus for browsers
-   that do support :focus-visible */
-  background: transparent;
-}
-
-a:not(.card__image):focus-visible {
-  /* Draw a very noticeable focus style for
-   keyboard-focus on browsers that do support
-   :focus-visible */
-  outline: 2px solid red;
-  background: transparent;
-}
-
-main {
-  position: relative;
-  overflow: hidden;
-  width: 100vw;
-}
-
-.unbutton {
-  background: none;
-  border: 0;
-  padding: 0;
-  margin: 0;
-  font: inherit;
-  cursor: pointer;
-}
-
-.unbutton:focus {
-  outline: none;
-}
 
 .scroll::after {
   background: linear-gradient(to bottom, #fff, var(--color-background));
@@ -184,23 +144,16 @@ main {
   background-size: 100%;
 }
 
-.grid__item {
-  margin: 0;
-  position: relative;
-  z-index: 1;
+.perspective-\[800px\] {
   perspective: 800px;
-  will-change: transform, opacity;
 }
 
-.grid__item > .grid__item-img {
+.grid__item-img {
   width: 100%;
   aspect-ratio: var(--grid-item-ratio);
   height: var(--grid-item-height);
   border-radius: var(--grid-item-radius);
   transform-style: preserve-3d;
-}
-
-.grid__item-img {
   background-size: cover;
   background-position: 50% 20%;
   backface-visibility: hidden;

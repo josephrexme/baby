@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-0: #333832;
+    --color-1: #435271;
+    --color-2: #515850;
+    --color-3: #70836E;
+    --color-4: #93B3A4;
+    --color-5: #899FA3;
+    --color-6: #E8F6EA;
+    --color-black: #0a0a0a;
+    --color-white: #ededed;
+    --color-background: var(--color-3);
+    --color-foreground: var(--color-white);
+    --background: var(--color-background);
+    --foreground: var(--color-foreground);
+    --color-link: #fff;
+    --color-link-hover: #ef5d36;
+    --color-title: #fff;
+    --perspective: 0px;
+    --grid-width: 100%;
+    --grid-max-width: 300px;
+    --grid-item-ratio: 1.2;
+    --grid-item-radius: 4px;
+    --grid-gap: 2rem;
+    --grid-columns: 2;
+    --grid-columns-full: 7;
+    --grid-rows-full: 5;
+    --grid-item-translate: 0px;
+    --grid-item-height: auto;
+  }
+}
+
+body {
+  color: var(--color-foreground);
+  background: var(--color-background);
+}
+
+.cta-btn::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-link);
+  z-index: -1;
+  transition: transform 0.3s;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+}
+
+.cta-btn:hover::after {
+  transform: scaleX(1);
+}
+
+/* Page Loader */
+.loading::before,
+.loading::after {
+  content: '';
+  position: fixed;
+  z-index: 10000;
+}
+
+.loading::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-background);
+}
+
+.loading::after {
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  margin: -30px 0 0 -30px;
+  border-radius: 50%;
+  opacity: 0.4;
+  background: var(--color-link);
+  animation: loaderAnim 0.7s linear infinite alternate forwards;
+
+}
+
+@keyframes loaderAnim {
+  to {
+    opacity: 1;
+    transform: scale3d(0.5,0.5,1);
+  }
+}
+
+/* Better focus styles from https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible */
+a:not(.card__image):focus {
+  /* Provide a fallback style for browsers
+   that don't support :focus-visible */
+  outline: none;
+  background: lightgrey;
+}
+
+a:not(.card__image):focus:not(:focus-visible) {
+  /* Remove the focus indicator on mouse-focus for browsers
+   that do support :focus-visible */
+  background: transparent;
+}
+
+a:not(.card__image):focus-visible {
+  /* Draw a very noticeable focus style for
+   keyboard-focus on browsers that do support
+   :focus-visible */
+  outline: 2px solid red;
+  background: transparent;
+}
+
+main {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+}
+
+.unbutton {
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.unbutton:focus {
+  outline: none;
+}
+
+.scroll::after {
+  background: linear-gradient(to bottom, #fff, var(--color-background));
+}
+
+.mark {
+  position: fixed;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100vw;
+  left: 0;
+  z-index: 50;
+  overflow: hidden;
+}
+
+.mark__inner {
+  display: flex;
+  gap: 3rem;
+  width: max-content;
+  position: relative;
+  transform: translateX(100vw);
+  will-change: transform;
+}
+
+.mark__inner span {
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.shadow::after {
+  content: '';
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 5000;
+  pointer-events: none;
+  background: linear-gradient(to right, var(--color-background), transparent, var(--color-background));
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.grid__item {
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  perspective: 800px;
+  will-change: transform, opacity;
+}
+
+.grid__item > .grid__item-img {
+  width: 100%;
+  aspect-ratio: var(--grid-item-ratio);
+  height: var(--grid-item-height);
+  border-radius: var(--grid-item-radius);
+  transform-style: preserve-3d;
+}
+
+.grid__item-img {
+  background-size: cover;
+  background-position: 50% 20%;
+  backface-visibility: hidden;
+  will-change: transform;
+}

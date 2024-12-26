@@ -3,12 +3,6 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
     --color-0: #333832;
     --color-1: #435271;
     --color-2: #515850;
@@ -22,21 +16,11 @@
     --color-foreground: var(--color-white);
     --background: var(--color-background);
     --foreground: var(--color-foreground);
-    --color-link: #fff;
-    --color-link-hover: #ef5d36;
     --color-title: #fff;
     --perspective: 0px;
-    --grid-width: 100%;
-    --grid-max-width: 300px;
-    --grid-item-ratio: 1.2;
-    --grid-item-radius: 4px;
-    --grid-gap: 2rem;
-    --grid-columns: 2;
-    --grid-columns-full: 7;
-    --grid-rows-full: 5;
-    --grid-item-translate: 0px;
-    --grid-item-height: auto;
-  }
+}
+
+@media (prefers-color-scheme: dark) {
 }
 
 body {
@@ -51,7 +35,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--color-link);
+  background: var(--color-6);
   z-index: -1;
   transition: transform 0.3s;
   transform: scaleX(0);
@@ -86,7 +70,7 @@ body {
   margin: -30px 0 0 -30px;
   border-radius: 50%;
   opacity: 0.4;
-  background: var(--color-link);
+  background: var(--color-6);
   animation: loaderAnim 0.7s linear infinite alternate forwards;
 
 }

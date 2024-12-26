@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <>
     <main className="page relative overflow-hidden w-screen">
-    <div className="relative h-screen mb-64 bg-cover text-center flex flex-col" style={{ background: "linear-gradient(to bottom, var(--color-background), rgba(0,0,0,0.4), var(--color-background)), url(/img/dino-bg.jpg) no-repeat 50% -10%" }}> 
+    <div className="relative h-svh mb-64 bg-cover text-center flex flex-col" style={{ background: "linear-gradient(to bottom, var(--color-background), rgba(0,0,0,0.4), var(--color-background)), url(/img/dino-bg.jpg) no-repeat 50% -10%" }}> 
       <div className="flex-1 grid place-items-center">
         <div className="mt-64">
           <h1 className={cx("text-[2rem] md:text-[4rem] leading-tight uppercase", RubikDoodleShadowFont.className)}>

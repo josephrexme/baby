@@ -17,7 +17,7 @@
     --background: var(--color-background);
     --foreground: var(--color-foreground);
     --color-title: #fff;
-    --perspective: 0px;
+    --hero-height: calc(100vh - 6rem);
 }
 
 @media (prefers-color-scheme: dark) {

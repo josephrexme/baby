@@ -27,7 +27,7 @@ export default function Home() {
     <main className="page relative overflow-hidden w-screen">
     <div className="relative mb-64 bg-cover text-center flex flex-col hero-bg"> 
       <div className="flex-1 grid place-items-center">
-        <div className="mt-64">
+        <div className="mt-20 md:mt-64">
           <h1 className={cx("text-[2rem] md:text-[4rem] leading-tight uppercase", RubikDoodleShadowFont.className)}>
             Welcome Baby Rex
           </h1> 

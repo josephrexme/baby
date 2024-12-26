@@ -42,7 +42,7 @@ const animateMarquee = () => {
   })
   .fromTo(marqueeInner, {
     x: '100vw',                           // Start the marquee off-screen to the right
-    autoAlpha: 0,                         // Start with opacity 0
+    autoAlpha: .6,                         // Start with opacity 0
   }, {
     x: '-100%',                          // Move the marquee to the left (completely across the screen)
     autoAlpha: 1,                         // Fade in to opacity 1
@@ -52,7 +52,7 @@ const animateMarquee = () => {
 
 // Function to animate the full grid with staggered delays per column
 const animateGridFull = () => {
-  const gridFullItems = gridFull.querySelectorAll('.grid__item'); // Select all items in the full grid
+  const gridFullItems = gridFull.querySelectorAll('#js-grid > figure'); // Select all items in the full grid
   
   // Calculate the number of columns in the grid--full
   const numColumns = getComputedStyle(gridFull).getPropertyValue('grid-template-columns').split(' ').length;

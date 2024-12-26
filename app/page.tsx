@@ -120,11 +120,12 @@ export default function Home() {
         </figure>
       </div>
     </section>
-    <footer className="mx-auto w-full md:w-3/4">
-      <p className={cx("mb-8 text-center text-4xl pb-16", AmaticSCFont.className)}>Baby Rex Due Date: March 2025!</p>
-      <p className={cx("mb-8 text-center text-4xl pb-16", AmaticSCFont.className)}>
-      We&rsquo;ve got a little secret, indeed it&rsquo;s true,<br /> A name for our baby, we&rsquo;ll share with you<br /> But until he arrives,
-      we&rsquo;ll keep it tight, a special surprise, a pure delight.<br /> When he&rsquo;s here, we&rsquo;ll share with cheer, the name of our son, whom we love so dear.
+    <footer className="mx-auto px-8 w-full md:w-3/4">
+      <p className={cx("mb-8 text-center text-3xl md:text-4xl pb-16", AmaticSCFont.className)}>Baby Rex Due Date: March 2025!</p>
+      <p className={cx("mb-8 text-center text-3xl md:text-4xl pb-16 leading-relaxed", AmaticSCFont.className)}>
+      We&rsquo;ve got a little secret, indeed it&rsquo;s true,<br /> A name for our baby, we&rsquo;ll share with you<br />
+      But until he arrives, we&rsquo;ll keep it tight,<br /> a special surprise, a pure delight<br />
+      When he&rsquo;s here, we&rsquo;ll share with cheer,<br /> the name of our son, whom we love so dear.
       </p>
       <p className={cx("text-center text-2xl pb-16", AmaticSCFont.className)}>Made with ❤ by Dad</p>
     </footer>

@@ -24,7 +24,7 @@ const PermanentMarkerFont = Permanent_Marker({
 export default function Home() {
   return (
     <>
-    <main className="shadow relative overflow-hidden w-screen">
+    <main className="page relative overflow-hidden w-screen">
     <div className="relative h-screen mb-64 bg-cover text-center flex flex-col" style={{ background: "linear-gradient(to bottom, var(--color-background), rgba(0,0,0,0.4), var(--color-background)), url(/img/dino-bg.jpg) no-repeat 50% -10%" }}> 
       <div className="flex-1 grid place-items-center">
         <div className="mt-64">
@@ -81,47 +81,47 @@ export default function Home() {
       <div className={cx("text-2xl lg:text-4xl mt-8", AmaticSCFont.className)}>images are coming soon</div>
     </section>
     <section>
-      <div className="grid mt-12 mb-16 gap-8 w-full h-auto p-8 grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6" id="js-grid">
+      <div className="grid mt-12 mb-16 gap-8 w-full h-auto p-8 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6" id="js-grid">
         <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
+          <div className="transform-gpu backface-hidden bg-[50%_20%] w-full bg-cover will-change-transform aspect-[1.2] h-auto rounded" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
         </figure>
         <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
+          <div className="transform-gpu backface-hidden bg-[50%_20%] w-full bg-cover will-change-transform aspect-[1.2] h-auto rounded" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
         </figure>
         <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
+          <div className="transform-gpu backface-hidden bg-[50%_20%] w-full bg-cover will-change-transform aspect-[1.2] h-auto rounded" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
         </figure>
         <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
+          <div className="transform-gpu backface-hidden bg-[50%_20%] w-full bg-cover will-change-transform aspect-[1.2] h-auto rounded" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
         </figure>
         <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
+          <div className="transform-gpu backface-hidden bg-[50%_20%] w-full bg-cover will-change-transform aspect-[1.2] h-auto rounded" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
         </figure>
         <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
+          <div className="transform-gpu backface-hidden bg-[50%_20%] w-full bg-cover will-change-transform aspect-[1.2] h-auto rounded" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
         </figure>
         <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
+          <div className="transform-gpu backface-hidden bg-[50%_20%] w-full bg-cover will-change-transform aspect-[1.2] h-auto rounded" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
         </figure>
         <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
+          <div className="transform-gpu backface-hidden bg-[50%_20%] w-full bg-cover will-change-transform aspect-[1.2] h-auto rounded" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
         </figure>
         <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
+          <div className="transform-gpu backface-hidden bg-[50%_20%] w-full bg-cover will-change-transform aspect-[1.2] h-auto rounded" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
         </figure>
         <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
+          <div className="transform-gpu backface-hidden bg-[50%_20%] w-full bg-cover will-change-transform aspect-[1.2] h-auto rounded" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
         </figure>
         <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
+          <div className="transform-gpu backface-hidden bg-[50%_20%] w-full bg-cover will-change-transform aspect-[1.2] h-auto rounded" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
         </figure>
         <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
-          <div className="grid__item-img" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
+          <div className="transform-gpu backface-hidden bg-[50%_20%] w-full bg-cover will-change-transform aspect-[1.2] h-auto rounded" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
         </figure>
       </div>
     </section>
     <footer className="mx-auto w-full md:w-3/4">
-      <p className={cx("mb-8 text-center text-4xl pb-16", AmaticSCFont.className)}>Baby Rex Due Date: March 2015!</p>
+      <p className={cx("mb-8 text-center text-4xl pb-16", AmaticSCFont.className)}>Baby Rex Due Date: March 2025!</p>
       <p className={cx("mb-8 text-center text-4xl pb-16", AmaticSCFont.className)}>
       We&rsquo;ve got a little secret, indeed it&rsquo;s true,<br /> A name for our baby, we&rsquo;ll share with you<br /> But until he arrives,
       we&rsquo;ll keep it tight, a special surprise, a pure delight.<br /> When he&rsquo;s here, we&rsquo;ll share with cheer, the name of our son, whom we love so dear.

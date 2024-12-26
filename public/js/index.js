@@ -85,7 +85,7 @@ const animateGridFull = () => {
       delay: delayFactor,                // Delay based on distance from the center
       ease: 'sine',
     })
-    .from(columnItems.map(item => item.querySelector('.grid__item-img')), {
+    .from(columnItems.map(item => item.querySelector('#js-grid > figure > div')), {
       // Apply rotation to the images inside each grid item
       transformOrigin: '50% 0%',          // Set the transform origin for the 3D effect
       ease: 'sine',

@@ -130,7 +130,7 @@ body {
   line-height: 1;
 }
 
-.shadow::after {
+.page::after {
   content: '';
   top: 0;
   left: 0;
@@ -148,14 +148,6 @@ body {
   perspective: 800px;
 }
 
-.grid__item-img {
-  width: 100%;
-  aspect-ratio: var(--grid-item-ratio);
-  height: var(--grid-item-height);
-  border-radius: var(--grid-item-radius);
-  transform-style: preserve-3d;
-  background-size: cover;
-  background-position: 50% 20%;
+.backface-hidden {
   backface-visibility: hidden;
-  will-change: transform;
 }

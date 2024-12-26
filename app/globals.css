@@ -17,6 +17,7 @@
     --background: var(--color-background);
     --foreground: var(--color-foreground);
     --color-title: #fff;
+    --hero-bg: linear-gradient(to bottom, var(--color-background), rgba(0,0,0,0.4), var(--color-background)), url(/img/dino-bg.jpg);
     --hero-height: calc(100vh - 6rem);
 }
 
@@ -44,6 +45,13 @@ body {
 
 .cta-btn:hover::after {
   transform: scaleX(1);
+}
+
+.hero-bg {
+  background-image: var(--hero-bg);
+  height: var(--hero-height);
+  background-repeat: no-repeat;
+  background-position: 50% -10%;
 }
 
 /* Page Loader */

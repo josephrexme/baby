@@ -2,6 +2,7 @@ import Script from 'next/script'
 import Image from 'next/image'
 import { Amatic_SC, Rubik_Doodle_Shadow, Permanent_Marker } from "next/font/google"
 import cx from "clsx"
+import PhotoGallery from './components/photo-gallery'
 
 const AmaticSCFont = Amatic_SC({
   weight: "400",
@@ -81,44 +82,7 @@ export default function Home() {
       <div className={cx("text-2xl lg:text-4xl mt-8", AmaticSCFont.className)}>images are coming soon</div>
     </section>
     <section>
-      <div className="grid mt-12 mb-16 gap-8 w-full h-auto p-8 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6" id="js-grid">
-        <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
-          <div className="transform-gpu backface-hidden bg-[50%_20%] w-full bg-cover will-change-transform aspect-[1.2] h-auto rounded" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
-        </figure>
-        <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
-          <div className="transform-gpu backface-hidden bg-[50%_20%] w-full bg-cover will-change-transform aspect-[1.2] h-auto rounded" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
-        </figure>
-        <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
-          <div className="transform-gpu backface-hidden bg-[50%_20%] w-full bg-cover will-change-transform aspect-[1.2] h-auto rounded" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
-        </figure>
-        <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
-          <div className="transform-gpu backface-hidden bg-[50%_20%] w-full bg-cover will-change-transform aspect-[1.2] h-auto rounded" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
-        </figure>
-        <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
-          <div className="transform-gpu backface-hidden bg-[50%_20%] w-full bg-cover will-change-transform aspect-[1.2] h-auto rounded" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
-        </figure>
-        <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
-          <div className="transform-gpu backface-hidden bg-[50%_20%] w-full bg-cover will-change-transform aspect-[1.2] h-auto rounded" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
-        </figure>
-        <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
-          <div className="transform-gpu backface-hidden bg-[50%_20%] w-full bg-cover will-change-transform aspect-[1.2] h-auto rounded" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
-        </figure>
-        <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
-          <div className="transform-gpu backface-hidden bg-[50%_20%] w-full bg-cover will-change-transform aspect-[1.2] h-auto rounded" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
-        </figure>
-        <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
-          <div className="transform-gpu backface-hidden bg-[50%_20%] w-full bg-cover will-change-transform aspect-[1.2] h-auto rounded" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
-        </figure>
-        <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
-          <div className="transform-gpu backface-hidden bg-[50%_20%] w-full bg-cover will-change-transform aspect-[1.2] h-auto rounded" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
-        </figure>
-        <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
-          <div className="transform-gpu backface-hidden bg-[50%_20%] w-full bg-cover will-change-transform aspect-[1.2] h-auto rounded" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
-        </figure>
-        <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
-          <div className="transform-gpu backface-hidden bg-[50%_20%] w-full bg-cover will-change-transform aspect-[1.2] h-auto rounded" style={{ backgroundImage: "url(img/placeholder.jpg)" }}></div>
-        </figure>
-      </div>
+      <PhotoGallery />
     </section>
     <footer className="mx-auto px-8 w-full md:w-3/4">
       <p className={cx("mb-8 text-center text-3xl md:text-4xl pb-16", AmaticSCFont.className)}>Baby Rex Due Date: March 2025!</p>

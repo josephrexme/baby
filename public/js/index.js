@@ -67,7 +67,7 @@ const animateGridFull = () => {
 
   // Animate each column, starting from the center column, with staggered delays for adjacent columns
   columns.forEach((columnItems, columnIndex) => {
-    const delayFactor = Math.abs(columnIndex - middleColumnIndex) * 0.2 // Delay based on distance from the center column
+    const delayFactor = columnIndex === middleColumnIndex ? 0.3 : Math.abs(columnIndex - middleColumnIndex) * 0.2 // Delay based on distance from the center column
 
     // GSAP timeline for the entire column
     gsap.timeline({
@@ -80,7 +80,7 @@ const animateGridFull = () => {
     })
     .from(columnItems, {
       // Animate the column items into view
-      yPercent: 450,                     // Start with items far below the viewport
+      yPercent: 250,                     // Start with items far below the viewport
       autoAlpha: 0,                      // Fade in from opacity 0
       delay: delayFactor,                // Delay based on distance from the center
       ease: 'sine',

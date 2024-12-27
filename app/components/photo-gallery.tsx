@@ -5,7 +5,7 @@ import "photoswipe/dist/photoswipe.css"
 
 export default function PhotoGallery() {
   return (
-    <div className="grid mt-12 mb-16 gap-8 w-full h-auto p-8 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6" id="js-grid">
+    <div className="grid mt-12 mb-16 gap-4 w-full h-auto p-8 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6" id="js-grid">
       <Gallery>
         <Item
           original="/img/placeholder.jpg"

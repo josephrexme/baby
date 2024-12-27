@@ -84,7 +84,7 @@ export default function Home() {
     <section>
       <PhotoGallery />
     </section>
-    <footer className="mx-auto px-8 w-full md:w-3/4">
+    <footer className="mx-auto py-24 px-8 w-full md:w-3/4" id="js-footer">
       <p className={cx("mb-8 text-center text-3xl md:text-4xl pb-16", AmaticSCFont.className)}>Baby Rex Due Date: March 2025!</p>
       <p className={cx("mb-8 text-center text-3xl md:text-4xl pb-16 leading-relaxed", AmaticSCFont.className)}>
       We&rsquo;ve got a little secret, indeed it&rsquo;s true,<br /> A name for our baby, we&rsquo;ll share with you<br />
@@ -98,6 +98,8 @@ export default function Home() {
   <Script src="js/gsap.min.js"></Script>
   {/* <!-- GSAP ScrollTrigger plugin --> */}
   <Script src="js/ScrollTrigger.min.js"></Script>
+  {/* <!-- GSAP SplitText (Club Membership), Trial only https://gsap.com/resources/trial/ --> */}
+  <Script src="https://assets.codepen.io/69098/SplitText3.min.js"></Script>
 
   {/* <!-- ImagesLoaded --> */}
   <Script src="js/imagesloaded.pkgd.min.js"></Script>

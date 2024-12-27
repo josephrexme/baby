@@ -1,12 +1,14 @@
-import { preloadImages } from './utils.js'; // Import utility function to preload images
+import { preloadImages } from './utils.js' // Import utility function to preload images
 
-gsap.registerPlugin(ScrollTrigger); // Register GSAP's ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger) // Register GSAP's ScrollTrigger plugin
 
-const aboutSection = document.getElementById('js-about'); // Select the about section
+const aboutSection = document.getElementById('js-about') // Select the about section
 
-const marqueeInner = document.getElementById('js-marquee'); // Select the inner element of the marquee
+const marqueeInner = document.getElementById('js-marquee') // Select the inner element of the marquee
 
-const gridFull = document.getElementById('js-grid'); // Select the full grid container
+const gridFull = document.getElementById('js-grid') // Select the full grid container
+
+const footerTexts = document.querySelectorAll("#js-footer p") // Select all footer text elements
 
 // Animate the aboutSection to fade in/out as the user scrolls
 const animateAboutSection = () => {
@@ -27,7 +29,7 @@ const animateAboutSection = () => {
     skewX: 10,         // Skew slightly on exit
     autoAlpha: 1,                       // Fade in to opacity 1
     ease: 'sine',
-  });
+  })
 }
 
 // Function to animate the horizontal marquee as the user scrolls
@@ -47,23 +49,23 @@ const animateMarquee = () => {
     x: '-100%',                          // Move the marquee to the left (completely across the screen)
     autoAlpha: 1,                         // Fade in to opacity 1
     ease: 'sine',
-  });
-};
+  })
+}
 
 // Function to animate the full grid with staggered delays per column
 const animateGridFull = () => {
-  const gridFullItems = gridFull.querySelectorAll('#js-grid > figure'); // Select all items in the full grid
+  const gridFullItems = gridFull.querySelectorAll('#js-grid > figure') // Select all items in the full grid
   
   // Calculate the number of columns in the grid--full
-  const numColumns = getComputedStyle(gridFull).getPropertyValue('grid-template-columns').split(' ').length;
-  const middleColumnIndex = Math.floor(numColumns / 2); // Find the index of the center column
+  const numColumns = getComputedStyle(gridFull).getPropertyValue('grid-template-columns').split(' ').length
+  const middleColumnIndex = Math.floor(numColumns / 2) // Find the index of the center column
 
   // Organize items by columns
-  const columns = Array.from({ length: numColumns }, () => []); // Initialize empty arrays for each column
+  const columns = Array.from({ length: numColumns }, () => []) // Initialize empty arrays for each column
   gridFullItems.forEach((item, index) => {
-    const columnIndex = index % numColumns; // Determine which column the item belongs to
-    columns[columnIndex].push(item); // Add the item to the respective column
-  });
+    const columnIndex = index % numColumns // Determine which column the item belongs to
+    columns[columnIndex].push(item) // Add the item to the respective column
+  })
 
   // Animate each column, starting from the center column, with staggered delays for adjacent columns
   columns.forEach((columnItems, columnIndex) => {
@@ -93,6 +95,28 @@ const animateGridFull = () => {
   })
 }
 
+const animateFooter = () => {
+  footerTexts.forEach(footerText => {
+    const splitFooterText = new SplitText(footerText, { type: 'chars' }) // Split each footer text into characters
+
+    // GSAP timeline for the footer text animation
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: footerText,              // Trigger the animation for each footer text element
+        start: 'top bottom',               // Start when the top of the element hits the bottom of the viewport
+        end: 'clamp(bottom top)',          // End when the bottom of the element hits the top of the viewport
+        scrub: true,                       // Smooth scrub as you scroll
+      }
+    })
+    .fromTo(splitFooterText.chars, {
+      x: (index) => index * 80 - ((splitFooterText.chars.length * 80) / 2),  // Start with extra spacing between characters, centered
+    }, {
+      x: 0,                               // Animate the characters back to their original position
+      ease: 'sine'
+    })
+  })
+}
+
 const matchMedia = gsap.matchMedia()
 
 
@@ -103,11 +127,12 @@ const init = () => {
   })
   animateMarquee()       // Animate the marquee on scroll
   animateGridFull()      // Animate the full grid with staggered delay
-};
+  animateFooter()        // Animate the footer text
+}
 
 // Preload images and initialize animations after the images have loaded
 preloadImages('.js-img').then(() => {
   document.body.classList.remove('loading') // Remove the 'loading' class from the body
   init() // Initialize the animations
   window.scrollTo(0, 0) // Scroll to the top of the page on load
-});
+})

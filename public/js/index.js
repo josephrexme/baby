@@ -85,7 +85,7 @@ const animateGridFull = () => {
       delay: delayFactor,                // Delay based on distance from the center
       ease: 'sine',
     })
-    .from(columnItems.map(item => item.querySelector('#js-grid > figure > div')), {
+    .from(columnItems.map(item => item.querySelector('#js-grid .js-img')), {
       // Apply rotation to the images inside each grid item
       transformOrigin: '50% 0%',          // Set the transform origin for the 3D effect
       ease: 'sine',
@@ -106,7 +106,7 @@ const init = () => {
 };
 
 // Preload images and initialize animations after the images have loaded
-preloadImages('.grid__item-img').then(() => {
+preloadImages('.js-img').then(() => {
   document.body.classList.remove('loading') // Remove the 'loading' class from the body
   init() // Initialize the animations
   window.scrollTo(0, 0) // Scroll to the top of the page on load

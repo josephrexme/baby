@@ -127,7 +127,7 @@ export default function Home() {
       But until he arrives, we&rsquo;ll keep it tight,<br /> a special surprise, a pure delight<br />
       When he&rsquo;s here, we&rsquo;ll share with cheer,<br /> the name of our son, whom we love so dear.
       </p>
-      <p className={cx("text-center text-2xl pb-16", AmaticSCFont.className)}>Made with ❤ by Dad</p>
+      <p className={cx("text-center text-2xl pb-16", AmaticSCFont.className)}>Made with <span aria-label="love">❤</span> by Dad</p>
     </footer>
   </main>
   {/* <!-- GSAP library --> */}

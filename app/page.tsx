@@ -98,8 +98,8 @@ export default function Home() {
   <Script src="js/gsap.min.js"></Script>
   {/* <!-- GSAP ScrollTrigger plugin --> */}
   <Script src="js/ScrollTrigger.min.js"></Script>
-  {/* <!-- GSAP SplitText (Club Membership), Trial only https://gsap.com/resources/trial/ --> */}
-  <Script src="https://assets.codepen.io/69098/SplitText3.min.js"></Script>
+  {/* <!-- Splitting.js --> */}
+  <Script src="https://unpkg.com/splitting/dist/splitting.min.js"></Script>
 
   {/* <!-- ImagesLoaded --> */}
   <Script src="js/imagesloaded.pkgd.min.js"></Script>

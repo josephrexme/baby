@@ -97,7 +97,8 @@ const animateGridFull = () => {
 
 const animateFooter = () => {
   footerTexts.forEach(footerText => {
-    const splitFooterText = new SplitText(footerText, { type: 'chars' }) // Split each footer text into characters
+    const splitFooterText = Splitting({ target: footerText, by: "chars" })[0] // Split each footer text element into words
+    console.log({ splitFooterText, chars: splitFooterText.chars })
 
     // GSAP timeline for the footer text animation
     gsap.timeline({
@@ -109,7 +110,12 @@ const animateFooter = () => {
       }
     })
     .fromTo(splitFooterText.chars, {
-      x: (index) => index * 80 - ((splitFooterText.chars.length * 80) / 2),  // Start with extra spacing between characters, centered
+      // x: (index) => index * 80 - ((splitFooterText.chars.length * 80) / 2),  // Start with extra spacing between characters, centered
+      x: (index) => {
+        const offset = splitFooterText.chars.length * 80
+        const result = index * 80 - offset / 2
+        return result
+      }
     }, {
       x: 0,                               // Animate the characters back to their original position
       ease: 'sine'

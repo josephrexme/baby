@@ -110,6 +110,14 @@ export default function Home() {
 
   {/* <!-- Scripts for the effect --> */}
   <Script type="module" src="js/index.js"></Script>
+
+  {/* <!-- Stat counter --> */}
+  <Script type="text/javascript" id="statcounter" dangerouslySetInnerHTML={{ __html: `
+    var sc_project=13072864; 
+    var sc_invisible=1; 
+    var sc_security="ae436648"; 
+  ` }}></Script>
+  <Script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></Script>
   </>
   );
 }

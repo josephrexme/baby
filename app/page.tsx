@@ -78,13 +78,13 @@ export default function Home() {
       </div>
     </div>
     <section className="text-center">
-      <div className={cx("text-4xl lg:text-[4rem]", RubikDoodleShadowFont.className)}>Baby Bump</div>
-      <div className={cx("text-2xl lg:text-4xl mt-8", AmaticSCFont.className)}>images are coming soon</div>
+      <div className={cx("text-4xl lg:text-[4rem] js-text", RubikDoodleShadowFont.className)}>Baby Bump</div>
+      <div className={cx("text-2xl lg:text-4xl mt-8 js-text", AmaticSCFont.className)}>images are coming soon</div>
     </section>
     <section>
       <PhotoGallery />
     </section>
-    <footer className="mx-auto py-24 px-8 w-full md:w-3/4" id="js-footer">
+    <footer className="mx-auto py-28 px-8 w-full md:w-3/4" id="js-footer">
       <p className={cx("mb-8 text-center text-3xl md:text-4xl pb-16", AmaticSCFont.className)}>Baby Rex Due Date: March 2025!</p>
       <p className={cx("mb-8 text-center text-3xl md:text-4xl pb-16 leading-relaxed", AmaticSCFont.className)}>
       We&rsquo;ve got a little secret, indeed it&rsquo;s true,<br /> A name for our baby, we&rsquo;ll share with you<br />

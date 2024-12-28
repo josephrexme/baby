@@ -6,7 +6,7 @@ import "photoswipe/dist/photoswipe.css"
 export default function PhotoGallery() {
   return (
     <div className="grid mt-12 mb-16 gap-4 w-full h-auto p-8 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6" id="js-grid">
-      <Gallery>
+      <Gallery withCaption>
         <Item
           original="/img/placeholder.jpg"
           thumbnail="/img/placeholder.jpg"
@@ -38,7 +38,7 @@ export default function PhotoGallery() {
           thumbnail="/img/placeholder.jpg"
           width="1024"
           height="768"
-          caption="Second image"
+          caption="Third image"
         >
           {({ ref, open }) => (
             <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
@@ -51,7 +51,7 @@ export default function PhotoGallery() {
           thumbnail="/img/placeholder.jpg"
           width="1024"
           height="768"
-          caption="Second image"
+          caption="Fourth image"
         >
           {({ ref, open }) => (
             <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
@@ -64,7 +64,7 @@ export default function PhotoGallery() {
           thumbnail="/img/placeholder.jpg"
           width="1024"
           height="768"
-          caption="Second image"
+          caption="Fifth image"
         >
           {({ ref, open }) => (
             <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
@@ -77,7 +77,7 @@ export default function PhotoGallery() {
           thumbnail="/img/placeholder.jpg"
           width="1024"
           height="768"
-          caption="Second image"
+          caption="Sixth image"
         >
           {({ ref, open }) => (
             <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
@@ -90,7 +90,7 @@ export default function PhotoGallery() {
           thumbnail="/img/placeholder.jpg"
           width="1024"
           height="768"
-          caption="Second image"
+          caption="Seventh image"
         >
           {({ ref, open }) => (
             <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
@@ -103,7 +103,7 @@ export default function PhotoGallery() {
           thumbnail="/img/placeholder.jpg"
           width="1024"
           height="768"
-          caption="Second image"
+          caption="Eighth image"
         >
           {({ ref, open }) => (
             <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
@@ -116,7 +116,7 @@ export default function PhotoGallery() {
           thumbnail="/img/placeholder.jpg"
           width="1024"
           height="768"
-          caption="Second image"
+          caption="Ninth image"
         >
           {({ ref, open }) => (
             <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
@@ -129,7 +129,7 @@ export default function PhotoGallery() {
           thumbnail="/img/placeholder.jpg"
           width="1024"
           height="768"
-          caption="Second image"
+          caption="Tenth image"
         >
           {({ ref, open }) => (
             <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
@@ -142,7 +142,7 @@ export default function PhotoGallery() {
           thumbnail="/img/placeholder.jpg"
           width="1024"
           height="768"
-          caption="Second image"
+          caption="Eleventh image"
         >
           {({ ref, open }) => (
             <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">
@@ -155,7 +155,7 @@ export default function PhotoGallery() {
           thumbnail="/img/placeholder.jpg"
           width="1024"
           height="768"
-          caption="Second image"
+          caption="Twelvth image"
         >
           {({ ref, open }) => (
             <figure className="perspective-[800px] m-0 relative z-1 will-change-auto">

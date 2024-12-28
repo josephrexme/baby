@@ -8,7 +8,7 @@ const marqueeInner = document.getElementById('js-marquee') // Select the inner e
 
 const gridFull = document.getElementById('js-grid') // Select the full grid container
 
-const footerTexts = document.querySelectorAll("#js-footer p") // Select all footer text elements
+const endTexts = document.querySelectorAll("#js-end p") // Select all end text elements
 const jsText = document.querySelectorAll('.js-text') // Select all text elements with the class 'js-text'
 
 // Animate the aboutSection to fade in/out as the user scrolls
@@ -55,7 +55,7 @@ const animateMarquee = () => {
 
 // Function to animate text (split into characters) as it scrolls into view
 const animateTextElement = () => {
-  const splitJsText = Splitting({ target: jsText, by: "chars" })[0] // Split each footer text element into words
+  const splitJsText = Splitting({ target: jsText, by: "chars" })[0] // Split each end text element into words
   gsap.timeline({
     scrollTrigger: {
       trigger: jsText,              // Trigger the animation when the text element enters the viewport
@@ -119,24 +119,24 @@ const animateGridFull = () => {
   })
 }
 
-const animateFooter = () => {
-  footerTexts.forEach(footerText => {
-    const splitFooterText = Splitting({ target: footerText, by: "chars" })[0] // Split each footer text element into words
+const animateEndTexts = () => {
+  endTexts.forEach(endText => {
+    const splitEndText = Splitting({ target: endText, by: "chars" })[0] // Split each end text element into words
     const SPLIT_SPACING = 50
 
-    // GSAP timeline for the footer text animation
+    // GSAP timeline for the end text animation
     gsap.timeline({
       scrollTrigger: {
-        trigger: footerText,              // Trigger the animation for each footer text element
+        trigger: endText,              // Trigger the animation for each end text element
         start: 'top bottom',               // Start when the top of the element hits the bottom of the viewport
         end: 'clamp(bottom top)',          // End when the bottom of the element hits the top of the viewport
         scrub: true,                       // Smooth scrub as you scroll
       }
     })
-    .fromTo(splitFooterText.chars, {
+    .fromTo(splitEndText.chars, {
       // Start with extra spacing between characters, centered
       x: (index) => {
-        const offset = splitFooterText.chars.length * SPLIT_SPACING
+        const offset = splitEndText.chars.length * SPLIT_SPACING
         const result = index * SPLIT_SPACING - offset / 2
         return result
       }
@@ -161,7 +161,7 @@ const init = () => {
   animateTextElement()    // Animate the text elements
   animateGridFull()      // Animate the full grid with staggered delay
   matchMedia.add("(min-width: 768px) and (prefers-reduced-motion: no-preference)", () => {
-    animateFooter()        // Animate the footer text
+    animateEndTexts()        // Animate the end texts
   })
 }
 

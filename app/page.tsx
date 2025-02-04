@@ -79,7 +79,7 @@ export default function Home() {
     </div>
     <section className="text-center">
       <div className={cx("text-4xl lg:text-[4rem] js-text", RubikDoodleShadowFont.className)}>Baby Bump</div>
-      <div className={cx("text-2xl lg:text-4xl mt-8 js-text", AmaticSCFont.className)}>images are coming soon</div>
+      <div className={cx("text-2xl lg:text-4xl mt-8 js-text", AmaticSCFont.className)}>Before the baby gets here</div>
     </section>
     <section>
       <PhotoGallery />

@@ -22,7 +22,7 @@ interface Photo {
 const photoSelections: Photo[] = [
   { src: 'RexMaternity98.jpg', caption: 'Joined hands on beach', version: 'v1738555916' },
   { src: 'RexMaternity82.jpg', caption: 'Strong as the rock behind us' },
-  { src: 'RexMaternity36.jpg', caption: 'Holding mom and baby by the trees' },
+  { src: 'RexMaternity36.jpg', caption: 'Holding mom and baby by the trees', orientation: 'portrait' },
   { src: 'RexMaternity101.jpg', caption: 'Looking at each other like: Are we ready for this?' },
   { src: 'RexMaternity91.jpg', caption: "Smiling because we've got this!", orientation: 'portrait' },
   { src: 'RexMaternity26.jpg', caption: 'Full picture by the trees' },
